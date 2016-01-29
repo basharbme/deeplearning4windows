@@ -1,0 +1,11 @@
+!obj:pylearn2.train.Train {
+#    dataset: !obj:pylearn2.datasets.mnist.MNIST { which_set: 'train' },
+    dataset: !obj:mnistForWindows.MNIST { which_set: 'train' },
+    model: !obj:pylearn2.models.softmax_regression.SoftmaxRegression {
+        batch_size: 20,
+        n_classes: 10,
+        nvis: 784,
+        irange: 0.01
+    },
+    algorithm: !obj:pylearn2.training_algorithms.sgd.SGD { learning_rate: 0.05 }
+}
