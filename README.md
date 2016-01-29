@@ -1,6 +1,6 @@
 # deeplearning4windows
 
-Are you Windows user? With only laptop? 
+Are you Windows user? With only laptop?  
 And also want to try DL(Deep Learning) libraries on Windows? Me too!   
 But of course, we should run DL app on linux with GPU for the speed.  
 
