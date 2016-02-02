@@ -1,9 +1,16 @@
 # coding: UTF-8
 
 import os
+import platform
+
+print platform.system()
 
 os.environ["PYLEARN2_DATA_PATH"] = os.path.dirname(os.getcwd()) + "/data"
-os.environ['THEANO_FLAGS'] = "floatX=float32,device=cpu"
+
+if platform.system() == "Windows":
+    os.environ['THEANO_FLAGS'] = "floatX=float32,device=cpu"
+else:
+    os.environ['THEANO_FLAGS'] = "floatX=float32,device=gpu"
 
 # 参考
 # http://qiita.com/fetaro/items/448407a6964d307e8840
